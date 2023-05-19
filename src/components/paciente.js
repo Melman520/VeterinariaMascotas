@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 5,
         textAlign: 'center',
-        fontWeight: 'bold',
+        color: 'black'
     },
     buttonContainer: {
         flexDirection: 'row',
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         width: 50,
         height: 40,
         margin: 5,
-        alignItems: 'center',
+        alignItems: 'center'
     },
 });
 

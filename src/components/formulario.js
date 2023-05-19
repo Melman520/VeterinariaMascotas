@@ -145,7 +145,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)'
   },
   modalContent: {
     width: '100%',
@@ -159,14 +158,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: 'black'
   },
   input: {
+    fontSize:18,
     height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    borderColor: 'black',
+    borderWidth: 2,
     borderRadius: 10,
     paddingHorizontal: 10,
-    marginBottom: 30
+    marginBottom: 30,
+    fontWeight: 'bold'
   },
   btnCloseModal: {
     backgroundColor: '#eb4034',
