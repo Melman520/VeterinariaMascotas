@@ -39,6 +39,7 @@ const Formulario = ({ modalVisible, setModalVisible, setPacientes, pacientes, pa
   }
 
   const editarCita = () => {
+    console.log(paciente, propietario)
     if ([
       paciente, propietario,
       //email, sintomas
@@ -65,10 +66,11 @@ const Formulario = ({ modalVisible, setModalVisible, setPacientes, pacientes, pa
   }
 
   const crearCita = () => {
+    console.log(paciente, propietario)
     if ([
       paciente, propietario,
       //email, sintomas
-    ].includes('')) {
+    ].includes(undefined)) {
       Alert.alert('Error', 'Todos los campos son obligatorios')
       return
     }
