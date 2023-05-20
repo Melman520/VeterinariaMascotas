@@ -26,7 +26,17 @@ const Formulario = ({ modalVisible, setModalVisible, setPacientes, pacientes, pa
       setTelefono(pacienteActual.telefono)
       setSintomas(pacienteActual.sintomas)
     }
-  }, [pacienteActual])
+  }, [modalVisible])
+
+  const limpiarCampos = () => {
+
+    setPaciente('')
+    setPropietario('')
+    setEmail('')
+    setTelefono('')
+    setSintomas('')
+
+  }
 
   const editarCita = () => {
     if ([
@@ -50,12 +60,7 @@ const Formulario = ({ modalVisible, setModalVisible, setPacientes, pacientes, pa
 
     setModalVisible(false)
 
-    //Limpiar los campos
-    setPaciente('')
-    setPropietario('')
-    setEmail('')
-    setTelefono('')
-    setSintomas('')
+    limpiarCampos();
 
   }
 
@@ -80,17 +85,13 @@ const Formulario = ({ modalVisible, setModalVisible, setPacientes, pacientes, pa
     setModalVisible(false)
 
     //Limpiar los campos
-    setPaciente('')
-    setPropietario('')
-    setEmail('')
-    setTelefono('')
-    setSintomas('')
+    limpiarCampos();
   }
   return (
     <Modal animationType='slide' visible={modalVisible} style={styles.modalContainer}>
       <SafeAreaView style={styles.modalContent}>
         <ScrollView>
-          <Pressable style={styles.btnCloseModal} onPress={() => setModalVisible(false)}>
+          <Pressable style={styles.btnCloseModal} onPress={() => {setModalVisible(false); limpiarCampos()}}>
             <Text style={styles.btnTextCloseModal}>{pacienteActual ? 'Cancelar' : 'Cerrar'}</Text>
           </Pressable>
           <View><Text style={styles.label}>Nombre paciente</Text></View>
